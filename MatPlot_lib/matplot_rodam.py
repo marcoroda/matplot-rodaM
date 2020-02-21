@@ -24,12 +24,21 @@ class MatPlot(object):
         # show plot
         plt.show()
 
+    def plot_gp(self, y, plot_title, x_title, y_title):
+        ''' Plots a General Purpose graph '''
+        x = np.arange(0, len(y))
+        plt.plot(x, y)
+        # Set titles
+        plt.xlabel(x_title)
+        plt.ylabel(y_title)
+        plt.title(plot_title)
+        # show plot
+        plt.show()
 
 
 #### for testing MAIN ####
 def main():
     mat_plot = MatPlot()
-    mat_plot.plot_sin(2, 1, 1)
 
 if __name__ == '__main__':
     main()
